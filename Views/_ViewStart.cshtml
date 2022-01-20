@@ -1,0 +1,14 @@
+﻿@* This sets default layout page for all other pages. ViewStart file is hierarchical, meaning that if placed in folder "Home"
+   that one will override one in "View" folder. This is convinient to set different layouts for different folders/sets of pages.
+   Also, layout could be specified in page directly, and this will override layout defined for specific folder.
+   So, hierarchy goes:
+        1. _ViewStart in View folder, 
+        2. _ViewStart in specific folder (like "Home"),
+        3. Layout define in page itself (here it could be set tu null, and then layout will not be used at all).
+   Code in ViewStart is executed before idvidiual code on page. Also, it could be defined dynamic logic for chosing dfferent 
+   layouts (if user is admin, use this layout, etc.).
+*@
+
+@{
+    Layout = "_Layout";
+}
