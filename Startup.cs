@@ -35,7 +35,7 @@ namespace EmployeeManagement
             //This method injects DBContext class, but when service is requested, method checks if there is already an instance of DbContext class created. If yes, it uses that isntance. It is better to use it from performance stand point (comapring with AddDbContex method). 
             services.AddDbContextPool<AppDbContex>(options => options.UseSqlServer(_config.GetConnectionString("EmployeeDbConnection")));
 
-            services.AddIdentity<IdentityUser, IdentityRole>(options =>
+            services.AddIdentity<ApplicationUser, IdentityRole>(options =>
                 {
                     options.Password.RequiredLength = 10;
                     options.Password.RequiredUniqueChars = 3;

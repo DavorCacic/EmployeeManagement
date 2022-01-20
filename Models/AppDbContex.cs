@@ -14,7 +14,8 @@ namespace EmployeeManagement.Models
     //3. Add midleware to pipeline ()
     //4. Create migration (Note that base.OnModelCreating(modelBuilder) was added to OnModelCreating overridden method) ,
     //5. update database
-    public class AppDbContex : IdentityDbContext
+    //Note that after extending IdentityUser class, Applicationuser class is passed as generic parameter. If we use built-in IdentityUser class, than generic parameter is not needed. 
+    public class AppDbContex : IdentityDbContext<ApplicationUser>
     {
         //One property for all classes that will be stored in DB
         public DbSet<Employee> Employees { get; set; }
