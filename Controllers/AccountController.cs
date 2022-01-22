@@ -45,6 +45,7 @@ namespace EmployeeManagement.Controllers
                 {
                     UserName = model.Email,
                     Email = model.Email,
+                    City = model.City
                 };
 
                 var result = await userManager.CreateAsync(user, model.Password);
