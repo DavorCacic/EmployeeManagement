@@ -19,7 +19,7 @@
                     <h5 class="card-title">@role.Name</h5>
                 </div>
                 <div class="card-footer">
-                    <a asp-controller="home" asp-action="index" class="btn btn-primary">Edit</a>
+                    <a asp-controller="administration" asp-action="EditRole" asp-route-id="@role.Id" class="btn btn-primary">Edit</a>
                     <a asp-controller="home" asp-action="index"  class="btn btn-primary">Delete</a>
                 </div>
             </div>
